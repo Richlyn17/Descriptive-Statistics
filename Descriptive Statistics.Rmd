@@ -1,0 +1,80 @@
+---
+title: "Descriptive Statistics"
+author: "Richlyn Molina"
+date: "2023-03-16"
+output: html_document
+---
+
+```{r}
+library(readxl)
+ <- read_excel
+View
+```
+
+```{r}
+# Store the data in the variable my_data
+my_data <- 
+```
+
+
+```{r}
+# Print the first 5 rows
+head(my_data, 5)
+```
+
+# 
+
+# Descriptive statistics for a single group
+
+## Measure of central tendency: mean, median, mode
+
+```{r}
+# Compute the mean value
+mean(my_data$Sepal.Length)
+```
+
+```{r}
+median(my_data$Sepal.Length)
+```
+
+```{r}
+mfv(my_data$Sepal.Length)
+```
+
+## Measure of variablity
+
+```{r}
+min(my_data$Sepal.Length)
+```
+
+```{r}
+max(my_data$Sepal.Length)
+```
+
+```{r}
+range(my_data$Sepal.Length)
+```
+
+### Interquartile range
+
+```{r}
+quantile(my_data$Sepal.Length)
+```
+
+```{r}
+quantile(my_data$Sepal.Length, seq(0, 1, 0.1))
+```
+
+```{r}
+IQR(my_data$Sepal.Length)
+```
+
+### Variance and standard deviation
+
+```{r}
+var(my_data$Sepal.Length)
+```
+
+```{r}
+sd(my_data$Sepal.Length)
+```
